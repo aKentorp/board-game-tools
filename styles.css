@@ -1,0 +1,266 @@
+/* Place your CSS styles in this file */
+
+h1 {
+    text-align: center;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: normal;
+}
+/* Add a black background color to the top navigation */
+.topnav {
+  border-radius: 5px;
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.b1 {
+    padding: 5px;
+}
+
+/* CSS for the board games list */
+#box1 {
+  display: none;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(46, 164, 156, 0.516);
+  background-color: #e7f9f8;
+}
+
+#box1 > div:first-child {
+  display: flex;
+  justify-content: normal;
+  width: 100%;
+  margin-bottom: 20px; /* Or whatever space you want between the buttons and the game tiles */
+}
+
+#box1 li {
+  margin-bottom: 10px;
+  background-color: #f3f3f3;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(46, 164, 156, 0.516);
+}
+
+#box1 li:hover {
+  background-color: #e9e9e9;
+}
+
+#box1 li:last-child {
+  margin-bottom: 0;
+}
+
+#box2 {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(46, 164, 156, 0.516);
+  background-color: #e7f9f8;
+  margin-top: 20px;
+}
+
+.spinner {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.container {
+  display: flex;
+}
+
+.board-games {
+  flex: 1;
+  padding: 10px;
+}
+
+.game-details-container {
+  flex: 2;
+  padding: 10px;
+}
+
+.game-item {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px;
+  max-height: 200px;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 165, 86, 0.153);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  text-align: center;
+  background-color: rgb(249, 255, 253);
+}
+
+.game-item img {
+  width: 250;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.game-item h3 {
+  margin-top: 10px;
+  color: #333;
+  font-size: 18px;
+}
+
+.game-item:hover {
+  transform: scale(1.05);
+}
+
+.game-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  height: auto;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 165, 86, 0.153);
+  background-color: rgb(249, 255, 253);
+  margin-bottom: 20px;
+}
+
+.game-details img.game-thumbnail {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.game-thumbnail {
+  width: 300px;
+  height: autopx;
+  object-fit: contain;
+  margin-right: 20px;
+}
+
+.game-details p {
+  text-align: justify;
+  color: #333;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.game-details p:first-child {
+  margin-top: 10px;
+}
+
+.game-details p:last-child {
+  margin-bottom: 0;
+}
+
+.game-details p::first-letter {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #4CAF50;
+  margin-right: 1px;
+}
+
+.playtime-details {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #4CAF50;
+  margin-top: 5px;
+}
+
+.start-game-button {
+  background-color: #4CAF50;
+  color: white;
+  width: auto;
+  height: 35px;
+  border: none;
+  padding: 10px 10px;
+  margin-right: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  outline: none;
+}
+
+#game-controls {
+  margin-top: 10px;
+}
+
+#timer-container {
+  margin-top: 5px;
+}
+
+#timer {
+  font-size: 24px;
+}
+
+#timerButton {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#timerButton.stop {
+  background-color: #FF0000;
+}
+
+#result {
+  color: #FF0000;
+  margin-top: 20px;
+}

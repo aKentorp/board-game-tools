@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Board Game Collection</title>
+    <!-- Load external CSS styles -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      /* Add your custom CSS styles here */
+    </style>
+  </head>
+  <body>
+    <form id="BGForm">
+      <div class="topnav">
+        <a href="index.html">Home</a>
+        <a class="active" href="#board-games-unstable">Board Games</a>
+      </div>
+      <div style="padding: 10px">
+        <input id="bgInput" name="bgInput"></input>
+      </div>
+      <div style="padding: 7px">
+        <button class="b1" type="button" onclick="loadGames()">Search User</button>
+      </div>
+    </form>
+    
+    <div class="container">
+      <div class="board-games">
+        <h2 hidden="true" class="Heading">Board Games</h2>
+        <div id="box1"></div>
+      </div>
+      <div class="game-details-container">
+        <h2 hidden="true" class="Heading">Game Details</h2>
+        <div class="game-details" id="box2"></div>
+      </div>
+    </div>    
+
+    <!-- Load external JavaScript -->
+    <script src="board-games.js"></script>
+  </body>
+</html>
